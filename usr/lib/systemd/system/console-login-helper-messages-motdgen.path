@@ -3,7 +3,12 @@ Description=Monitor console-login-helper-messages runtime motd snippets director
 Documentation=https://github.com/coreos/console-login-helper-messages
 
 [Path]
+# Activate motdgen if new snippets are dropped into the runtime
+# directory.
 PathChanged=/run/console-login-helper-messages/motd.d
+# Activate motdgen if snippets were dropped already before the path
+# started.
+PathExistsGlob=/run/console-login-helper-messages/motd.d/*.motd
 Unit=console-login-helper-messages-motdgen.service
 
 [Install]
