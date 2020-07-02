@@ -1,7 +1,6 @@
 [Unit]
 Description=Generate console-login-helper-messages motd snippet
-Documentation=https://github.com/coreos/console-login-helper-messages
-Before=systemd-user-sessions.service
+Documentation=https://github.com/coreos/console-login-helper-messages\
 
 [Service]
 Type=oneshot
